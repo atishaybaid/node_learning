@@ -15,8 +15,19 @@ if(!args.file|| args.file==='help'){
 
 
 
+function cb(err,content){
+    if(err){
+        console.error(err)
+    } else{
+        console.log(content.toString());
+    }
+
+
+}
+
+
 function read_file(fileName){
-    say.read_file(fileName);
+    say.read_file(fileName,cb);
 }
 
 
@@ -26,4 +37,4 @@ function read_file(fileName){
 
 
 
- say.read_file(args.file);
+ say.read_file(args.file,cb);

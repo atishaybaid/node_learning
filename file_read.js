@@ -1,10 +1,23 @@
 const fs = require('fs');
 
 
-function read_file(fileName){
+function read_file(fileName,cb){
 
-    var contents = fs.readFileSync(fileName);
-    console.log(contents.toString());
+ fs.readFile(fileName,function(err,content){
+    if(err){
+        cb(err);
+    } else{
+        setTimeout(function(){
+            cb(null,content);
+        },1000)
+    }
+ });
+    
+  
+
+   
+
+
 }
 
 
