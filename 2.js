@@ -1,7 +1,5 @@
 var args  = require('minimist')(process.argv.slice(2),{string:'file'})
-var say = require('./file_read.js');
-var ASQ = require('asynquence');
-require('asynquence-contrib');
+var read_file = require('./file_read2.js');
 
 function printHelp(){
     console.log("Help Menu (c) Atishay Baid");
@@ -28,4 +26,19 @@ function cb(err,content){
 }
 
 
- say.read_file(args.file,cb);
+
+
+
+
+
+
+
+
+
+ read_file.say(args.file)
+.val(function(contents){
+    console.log(contents.toString());
+})
+.or(function(err){
+    console.error("Error:" + err);
+})

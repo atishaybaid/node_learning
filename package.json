@@ -4,6 +4,8 @@
   "description": "",
   "main": "1.js",
   "dependencies": {
+    "asynquence": "^0.10.0",
+    "asynquence-contrib": "^0.28.0",
     "minimist": "^1.2.0"
   },
   "devDependencies": {},
