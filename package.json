@@ -6,7 +6,8 @@
   "dependencies": {
     "asynquence": "^0.10.0",
     "asynquence-contrib": "^0.28.0",
-    "minimist": "^1.2.0"
+    "minimist": "^1.2.0",
+    "node-static": "^0.7.9"
   },
   "devDependencies": {},
   "scripts": {
